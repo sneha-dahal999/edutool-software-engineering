@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Edutool.com Login</title>
+</head>
+<body>
+    <h1>Edutool.com E-Book Library</h1>
+    <h2>Login</h2>
+
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+
+    <form method="post">
+        <label>Username:
+            <input type="text" name="username" required>
+        </label><br><br>
+
+        <label>Password:
+            <input type="password" name="password" required>
+        </label><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p>Demo account: sneha / password123</p>
+</body>
+</html>

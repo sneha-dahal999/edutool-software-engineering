@@ -17,6 +17,9 @@ Edutool.com is a planned responsive e-book library management system with accoun
 - Version control: Git / GitHub
 - Modelling: Lucidchart
 
+## Current implementation
+A small Flask prototype is included with login, session-based access control, catalogue display and catalogue search. Automated pytest tests cover the first five functional test cases. GitHub Actions is configured to run the pytest suite on pushes and pull requests.
+
 ## Repository structure
 See `docs/` for requirements, design, testing and project-management documentation.
 

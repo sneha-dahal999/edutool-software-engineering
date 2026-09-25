@@ -51,3 +51,13 @@ def test_tc05_catalogue_search(client):
     response = client.get("/catalogue?q=Python")
     assert response.status_code == 200
     assert b"Python Basics" in response.data
+
+
+def test_tc06_catalogue_search_no_match(client):
+    client.post(
+        "/login",
+        data={"username": "sneha", "password": "password123"},
+    )
+    response = client.get("/catalogue?q=xyz123")
+    assert response.status_code == 200
+    assert b"No matching books found." in response.data
